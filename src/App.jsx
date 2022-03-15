@@ -45,11 +45,12 @@ function App() {
   //   </div>
   // )
 
+
   return (
     <Fragment>
       <div className="container">
         <div className="content">
-          <h1>Localiza Endereço</h1>
+          <h1>Localizar Endereço</h1>
           <form className="form" onSubmit={(e) => {e.preventDefault()}}>
             <label htmlFor="cep" className="ident-invisible">
               Informe seu cep:
