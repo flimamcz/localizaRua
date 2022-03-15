@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;1,400&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: var(--text-color);
+    font-size: 62.5%;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+
+body{
+    background-color: var(--bg-color);
+    font-family: 'Poppins', sans-serif;
+}
+
+:root{
+    --text-color: #fff;
+    --bg-color: #2A2A2F;
+    --main-color: #9466FF;
+}
+
+.container{
+    width: min(60%, 600px);
+    margin: 30px auto;
+}
+
+.content h1{
+    font-size: 3.2rem;
+    text-align: center;
+    font-style: italic;
+}
+
+.content h1::after{
+    content: "";
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: var(--main-color);
+    margin: 0 auto;
+}
+
+.ident-invisible{
+    position: absolute;
+    top: -999999px;
+}
+
+/* Form*/
+
+.form{
+    width: 100%;
+    margin: 32px 0;
+}
+
+.form input{
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.4rem; 
+    width: 100%;
+    padding: 16px;
+    background: rgba(119, 110, 110, 0.15);
+    border: 1px solid var(--main-color);
+    border-radius: 0.2rem;
+    box-shadow: 2px 4px 6px rgba(119, 110, 110, 0.2);
+    outline: none;
+}
+
+.form input:focus{
+    border-color: greenyellow;
+    transition: 0.5s;
+}
+
+/*BUTTON SEARCH*/
+
+.button-search{
+    width: min(20%, 240px);
+    outline: none;
+    border: none;
+    background: var(--main-color);
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.6rem;
+    padding: 10px 20px;
+    border-radius: 0.2rem;
+    box-shadow: 2px 4px 6px rgba(119, 110, 110, 0.1);
+    cursor: pointer;
+    margin-top: 20px;
+    border: 1px solid var(--main-color);
+}
+
+.button-search:hover{
+    background-color: #692df5;
+    border-color: greenyellow;
+    transition: .4s;
+}
+
+.loading{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 2px solid var(--main-color);
+    border-top-color: #fff;
+    margin: 200px auto;
+    animation: loading 1s infinite;
+}
+
+@keyframes loading{
+    from{
+        transform: rotate(-180deg);
+    }
+}
+
+.error{
+    font-size: 3.2rem;
+    color: red;
+    position: absolute;
+    top: 50%;
+    text-align: center;
+    right: 50%;
+}
+
+/* content cep */
+.content-cep{
+    width: 100%;
+    display: block;
+    padding: 20px;
+    border: 1px solid var(--main-color);
+}
+
+.content-cep li{
+    text-transform: uppercase;
+    margin: 5px;
+    font-size: 1.6rem;
+    font-weight: 500;
+}
+
+.span-info{
+    font-size: 1.4rem;
+    font-size: 300;
+    text-transform: capitalize;
+    padding-left: 5px;
+    color: rgb(212, 195, 195);
+}
+
+.await-cep{
+  font-size: 4rem;
+  text-align: center;
+  font-weight: 500;
+}
+
+/* Animando input, button e content cep */
+
+.form, .content-cep, .await-cep, .content h1{
+    animation: animeCep .4s forwards;
+}
+
+@keyframes animeCep {
+    from{
+        opacity: 0;
+        transform: translate3d(-35px, 0, 0);
+    }
+
+    to{
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
